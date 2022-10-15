@@ -6,7 +6,7 @@ const emailRef = document.querySelector('input[name=email]');
 const messageRef = document.querySelector('textarea[name=message]');
 
 
-formRef.addEventListener('input', onInput);
+formRef.addEventListener('input', throttle(onInput, 500));
 formRef.addEventListener('submit', onSubmitForm);
 
 let lastForm = {}
